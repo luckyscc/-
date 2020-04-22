@@ -7,10 +7,23 @@
 </head>
 <body>
     <script>
-        var o = new Object()
+        function Person() {
+            this.sayHello = function () {
+
+            }
+        }
+        var o = new Person()
         console.log(o)
         console.log(o.constructor) // 构造函数Object
-        o.proto
+        Person.prototype.sayHi = function() {
+            console.log('hi')
+        }
+        o.sayHi()
+        console.log(o.hasOwnProperty('sayHi'))
+        console.log(o.__proto__)
+        // var date = new symbol()
+        console.log(Object.prototype.toString.call(false))
+        
     </script>
 </body>
 </html>
